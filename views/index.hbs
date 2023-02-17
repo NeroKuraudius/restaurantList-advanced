@@ -49,10 +49,10 @@
               </div>
           </a>
           <div class="card-footer mb-3 text-end">
-            <a href="./restaurants/{{ this._id }}/edit">edit</a>
-            <a href="./restaurants/{{ this._id }}">detail</a>
+            <a href="./restaurants/{{ this._id }}/edit" type="button" class="btn btn-outline-success">edit</a>
+            <a href="./restaurants/{{ this._id }}" type="button" class="btn btn-outline-secondary">detail</a>
             <form action="./restaurants/{{ this._id }}/delete" method="POST" style="display: inline;">
-              <button type="submit" class="btn btn-danger">delete</button>
+              <button type="submit" class="btn btn-outline-danger">delete</button>
             </form>
           </div>
 
