@@ -1,0 +1,60 @@
+<form action="/restaurants/{{restaurant._id}}/edit" method="POST" style="item-align:center">
+
+  <div class="container">
+    <div class="mt-5 mb-3">
+      <label for="Name" class="me-4">餐廳名稱</label>
+      <input type="text" id="Name" name="name" value="{{restaurant.name}}" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="En-name" class="me-4">英文名稱</label>
+      <input type="text" id="En-name" name="name_en" value="{{restaurant.name_en}}">
+    </div>
+
+    <div class="mb-3">
+      <label for="Category-choice" class="me-4">餐廳類別</label>
+      <input list="restaurant-category" id="Category-choice" name="category" value="{{restaurant.category}}" required>
+      <datalist id="restaurant-category">
+        <option value="日本料理">
+        <option value="中東料理">
+        <option value="義式餐廳">
+        <option value="美式">
+        <option value="咖啡">
+        <option value="酒吧">
+      </datalist>
+    </div>
+
+    <div class="mb-3">
+      <label for="Image" class="me-4">圖片網址</label>
+      <input type="url" id="Image" name="image" value="{{restaurant.image}}" required>
+    </div>
+
+    <div class="mt-3">
+      <label for="Location" class="me-4">餐廳地址</label>
+      <input type="text" id="Location" name="location" value="{{restaurant.location}}" required>
+    </div>
+
+    <div class="mt-3">
+      <label for="Phone" class="me-4">餐廳電話</label>
+      <input type="tel" id="Phone" name="phone" value="{{restaurant.phone}}" required>
+    </div>
+
+    <div class="mt-3">
+      <label for="Map">Google地點</label>
+      <input type="url" id="Map" name="google_map" value="{{restaurant.google_map}}">
+    </div>
+
+    <div class="mt-3">
+      <label for="Rating" class="me-4">餐廳評分</label>
+      <input type="number" min="0" max="5" step="0.01" id="Rating" name="rating" value="{{restaurant.rating}}">
+    </div>
+
+    <div class="mt-3">
+      <label for="Description" class="me-4">餐廳說明</label>
+      <textarea id="Description" name="description" wrap="hard" rows="1" cols="20"
+        required>{{restaurant.description}}</textarea>
+    </div>
+
+    <button type="submit" class="mt-3">Create</button>
+  </div>
+</form>
